@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <title>My News</title>
+</head>
+<body>
+    <div class="container-fluid" id="header">
+        <h1>My News <span class="glyphicon glyphicon-search" id="search"></span></h1>
+    </div>
+    <div class="container" id="search-box">
+        <span class="glyphicon glyphicon-remove" id="close"></span>
+        <form onsubmit="return false" id="search-form" class="form-inline">
+            <div class="form-group">
+                <label for="search-keywords">Keywords</label>
+                <input id="search-keywords" name="search-keywords" type="text">
+            </div>
+            <div class="form-group">
+                <label for="start">From</label>
+                <input type="date" name="search-from" id="start">
+            </div>
+            <div class="form-group">
+                <label for="end">To</label>
+                <input type="date" name="search-from" id="end">
+            </div>
+            <div class="form-group">
+                <input id="search-submit" type="button" value="Search">
+            </div>
+        </form>
+    </div>
+    <div>
+        <img id="loading-gif" src="https://media4.giphy.com/media/L05HgB2h6qICDs5Sms/giphy.gif" alt="loading...">
+    </div>
+    <div id="showArea" class="container-fluid">
+        <div class="article container-fluid">
+            <img class="img-content col-md-3 col-sm-6 col-xs-12" src="https://www.siliconrepublic.com/wp-content/uploads/2020/03/BOO_3353_2.jpg" alt="Nick Leeder appointed as latest head of Google Ireland">
+            <div class="col-md-9 col-sm-6 col-xs-12"></div>
+            <a class="url" target="_blank" href="https://www.siliconrepublic.com/companies/nick-leeder-google-ireland">Nick Leeder appointed as latest head of Google Ireland</a>
+            <p class="publishedTime">2020-03-23T13:58:53Z</p>
+            <p>Google has announced that Nick Leeder will replace Fionnuala Meehan as the head of its Irish operation starting in April.</p>
+            </div>
+        </div>      
+    </div>
+</body>
+</html>

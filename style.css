@@ -1,0 +1,58 @@
+#header{
+    text-align: center;
+    background-color: orange;
+
+}
+
+.article{
+    padding: 10px 0;
+    font-size: 120%;
+    height: auto;
+    text-overflow: ellipsis;
+}
+#showArea{
+    background-color: lightgrey;
+    z-index: 1;
+}
+.url{
+    font-size: 150%;
+}
+.publishedTime{
+    font-size: 80%;
+    color: gray;
+}
+
+@media screen and (max-width: 768px){
+    .img-content, .content{
+        padding: 0;
+    }
+}
+
+#search-box{
+    position: fixed;
+    left: 15%;
+    right: 15%;
+    top: 20%;
+    display: none;
+    width: 50%;
+    height: auto;
+    z-index: 2;
+    background-color: white;
+    border: 1px black solid;
+}
+#search-form{
+    padding: 20px;
+    
+}
+#close {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+#loading-gif{
+    position: fixed;
+    left: 45%;
+    right: 15%;
+    top: 25%;
+    width: 5%;
+}
