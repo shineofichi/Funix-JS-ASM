@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="script.js"></script>
+
+    <title>Sổ điểm online</title>
+
+<body>
+    <h1 class="text-center">Sổ điểm online</h1>
+
+<div class="container-fluid">
+    <form class="form-horizontal" onsubmit="return false">
+        <div class="form-group">
+            <label for="nameStudent" class="control-label col-sm-3 col-lg-5">Họ và tên: </label>
+            <div class="col-sm-9 col-lg-7">
+            <input type="text" id="nameStudent" placeholder="Nhập tên học sinh" required><br>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="math" class="control-label col-sm-3 col-lg-5">Điểm môn Toán: </label>
+            <div class="col-sm-9 col-lg-7">
+            <input type="text" id="math" placeholder="Nhập điểm môn Toán"><br>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="physical" class="control-label col-sm-3 col-lg-5">Điểm môn Lý: </label>
+            <div class="col-sm-9 col-lg-7">
+            <input type="text" id="physical" placeholder="Nhập điểm môn Lý"><br>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="chemistry" class="control-label col-sm-3 col-lg-5">Điểm môn Hóa: </label>
+            <div class="col-sm-9 col-lg-7">
+            <input type="text" id="chemistry" placeholder="Nhập tên môn Hóa"><br>
+            </div>
+        </div>
+
+        <div class="form-group">        
+            <div class="col-sm-offset-3 col-sm-9 col-lg-offset-5 col-lg-7">
+              <button class="btn" id="submitBtn" value="Nhập">Nhập</button>
+            </div>
+          </div>
+    </form>
+</div>
+
+<div class="container-fluid notice">
+    <p><span id="notice"></span></p>
+</div>
+
+<div class="table-responsive container-fluid">
+<table id="markTable" class="table">
+    <tr>
+        <th>STT</th>
+        <th>Họ và tên</th>
+        <th>Toán</th>
+        <th>Lý</th>
+        <th>Hóa</th>
+        <th>Trung bình</th>
+        <th>Xếp loại</th>
+    </tr>
+
+</table>
+</div>
+
+<div class="col-sm-offset-3 col-sm-9 col-lg-offset-4 col-lg-8">
+    <button class="btn" id="showAvgButton">Tính điểm trung bình</button>
+    <button class="btn" id="isGoodStudentButton">Xác định học sinh giỏi</button>
+    <button class="btn" id="deleteAllButton">Xóa hết</button>
+    <button class="btn" id="deleteRowButton">Xóa hàng cuối</button>
+</div>
+
+</body>
+</html>
