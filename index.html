@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+    .info-box{
+        font-weight: bold;
+    }
+    </style>
+</head>
+
+<body>
+
+    <button onclick="begin()">Try it</button>
+
+    <div class = "info-box">
+        <p id = "name"></p>
+        <p id = "city"></p>
+        <p id = "phone"></p>
+        <p id = "email"></p>
+        <p id = "job"></p>
+        <p id = "phone"></p>
+        <p id = "age"></p>
+    </div>
+
+    <button style="display: none;" id="nextStep">Bước tiếp theo</button>
+
+    <script>
+        function begin() {
+
+            const date = new Date(); 
+            const year = date.getFullYear();
+
+            /*
+            TODO: tính tuổi từ năm sinh.
+            @param: năm sinh.
+            */
+            getAge = (born) => (year - born);
+            
+    
+            alert("Chào mừng bạn đến với ứng dụng JavaScript đầu tiên");
+
+            //Lấy thông tin tên.
+            var name = prompt("Hãy nhập tên của bạn");
+            document.getElementById("name").innerHTML = "Tên: " + name;
+
+            //Lấy thông tin thành phố.
+            var city = prompt("Hãy nhập thành phố bạn đang sinh sống");
+            document.getElementById("city").innerHTML = "Thành phố: " + city;
+
+            //Lấy thông tin số điện thoại.
+            var phone = prompt("Hãy nhập số điện thoại của bạn ");
+            document.getElementById("phone").innerHTML = "Số điện thoại: " + phone;
+
+            //Lấy thông tin email.
+            var email = prompt("Hãy nhập email của bạn ");
+            document.getElementById("email").innerHTML = "Email: " + email;
+
+            //Lấy thông tin nghề nghiệp.
+            var job = prompt("Hãy nhập nghề nghiệp của bạn ");
+            document.getElementById("job").innerHTML = "Nghề nghiệp: " + job;
+
+            //Lấy thông tin tuổi
+            var bornYear = prompt("Hãy nhập năm sinh của bạn");
+            //Chạy vòng lặp cho đến khi năm sinh nhỏ hơn năm hiện tại thì dừng.
+            while (bornYear > year){
+                bornYear = prompt("Hãy nhập lại năm sinh của bạn");
+            }
+            document.getElementById("age").innerHTML = "Tuổi: " + (getAge(bornYear));
+
+            //Hiện button Bước tiếp theo.
+            document.getElementById("nextStep").style.display = "block";
+        }
+       
+    </script>
+    
+</body>
+</html>
